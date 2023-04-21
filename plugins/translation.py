@@ -3,53 +3,41 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 class Translation(object):
 
     START_TEXT = """
-🤗 Hello {}
+Hello {},
+I'm Alifa!
+You can upload HTTP/HTTPS direct link, Using this bot.
 
-I Am Telegram URL Uploader Bot.
-
-**__Send me a direct link and I will upload it to telegram as a file/video.__**
-
-**Use Help Button To Know How To Use Me**
+/help for more details!
 """
     HELP_TEXT = """
-𒊹︎︎︎ How To Upload File Or Media 
+Q:How to upload file or media?
+A:Send your shareable or public link of file or media.
 
-➪ Send Your Link For Upload File Or Media.
+Q:How to set thumbnail?
+A:Send a photo to permanently add that as a thumbnail.
 
-𒊹︎︎︎ How to set thumbnail
+Q:How to delete thumbnail?
+A:Use /delthumb to delete your thumbnail.
 
-➪ Send Your Thumbnail Photo And Permanent Added Your Photo.
-
-𒊹︎︎︎ How To Deleting Thumbnail
-
-➪ Send /delthumb To Delete Your Thumbnail.
-
-𒊹︎︎︎ How To Show Thumbnail 
-
-➪ Send /showthumb To View Custom Thumbnail 
+Q:How to check which thumbnail you using? 
+A:Use /showthumb to view custom thumbnail. 
  
 """
     ABOUT_TEXT = """
-**📛 My Name** : [Uploader Bot V3 🚀](http://t.me/UploadFlieBot)
-
-**❤️ Version** : [2.3 🔥](http://t.me/UploadFlieBot)
-
-**🤖 Source** : [Click](https://github.com/LISA-KOREA/UPLOADER-BOT-V3)
-
-**🧿 Language** : [Python 3.10.11](https://www.python.org/)
-
-**📢 Framework** : [Pyrogram 1.4.16](https://docs.pyrogram.org/)
-
-**👨‍💻 Developer** : [LISA](https://t.me/LISA_FAN_LK)
+Name: AlifaBot 
+Version: 0.1
+Language: [Python 3.10.11](https://www.python.org/)
+Framework: [Pyrogram 1.4.16](https://docs.pyrogram.org/)
+Developer: [Abeseil](https://t.me/abeseil)
 
 """
 
 
     PROGRESS = """
-🚀 Sᴘᴇᴇᴅ : {3}/s\n
-✅ Dᴏɴᴇ : {1}\n
-📁 Tᴏᴛᴀʟ Sɪᴢᴇ  : {2}\n
-🕔 Tɪᴍᴇ : {4}\n
+Speed: {3}/s\n
+Done: {1}\n
+Total file size: {2}\n
+Time: {4}\n
 """
 
 
@@ -76,7 +64,7 @@ I Am Telegram URL Uploader Bot.
         InlineKeyboardButton('Back', callback_data='home'),
         InlineKeyboardButton('Help', callback_data='help')
         ],[
-        InlineKeyboardButton('🔒 Close', callback_data='close')
+        InlineKeyboardButton('Close', callback_data='close')
         ]]
     )
     BUTTONS = InlineKeyboardMarkup(
@@ -84,32 +72,32 @@ I Am Telegram URL Uploader Bot.
         InlineKeyboardButton('Close', callback_data='close')
         ]]
     )
-    TEXT = "sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ᴛᴏ sᴇᴛ ɪᴛ"
-    IFLONG_FILE_NAME = " Only 64 characters can be named . "
-    RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
+    TEXT = "Send any custom thumbnail to set."
+    IFLONG_FILE_NAME = "Only 64 characters can be named."
+    RENAME_403_ERR = "Sorry you are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
-    UPGRADE_TEXT = "<b>No preminum plans available in this bot </b>  /help for Details"
-    FORMAT_SELECTION = "<b>Select Your Format 👇\n\n🎥 Video = Upload As Streamble\n\n📂 File =Upload As File\n\n👮‍♂ Powered By :</b> @NT_BOT_CHANNEL"
+    UPGRADE_TEXT = "<b>No preminum plans available in this bot </b>  /help for details"
+    FORMAT_SELECTION = "<b>Select your format \n\n video = upload as streamble\n\n file = upload as file\n\n"
     SET_CUSTOM_USERNAME_PASSWORD = """"""
-    NOYES_URL = "@robot URL detected. Please use https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
-    DOWNLOAD_START = "📥 Downloading..."
-    UPLOAD_START = "📤 Uploading.."
-    RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
+    NOYES_URL = "Slow URL detected. Please use public link and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
+    DOWNLOAD_START = "Downloading..."
+    UPLOAD_START = "Uploading..."
+    RCHD_BOT_API_LIMIT = "Size grater than maximum allowed size (50MB). Neverthless, trying to upload."
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 2GB due to Telegram API limitations."
-    AFTER_SUCCESSFUL_UPLOAD_MSG = " OWNER : Lisa 💕\nFor the List of Telegram Bots"
-    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Dᴏᴡɴʟᴏᴀᴅᴇᴅ ɪɴ {} sᴇᴄᴏɴᴅs.\n\nTʜᴀɴᴋs Fᴏʀ Usɪɴɢ Mᴇ\n\nUᴘʟᴏᴀᴅᴇᴅ ɪɴ {} sᴇᴄᴏɴᴅs"
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "Successfully uploaded."
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds.\nUploaded in {} seconds."
     NOT_AUTH_USER_TEXT = "Please /upgrade your subscription."
-    SAVED_CUSTOM_THUMB_NAIL = "Save Your Thumbnail ✔️"
-    DEL_ETED_CUSTOM_THUMB_NAIL = "Save Your Thumbnail ✔️."
-    FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "Delete Your Thumbnail 😏."
-    SAVED_RECVD_DOC_FILE = "Document Downloaded Successfully."
+    SAVED_CUSTOM_THUMB_NAIL = "Save your thumbnail"
+    DEL_ETED_CUSTOM_THUMB_NAIL = "Delete your thumbnail"
+    FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "Delete Your Thumbnail."
+    SAVED_RECVD_DOC_FILE = "Document downloaded successfully."
     CUSTOM_CAPTION_UL_FILE = " "
-    NO_CUSTOM_THUMB_NAIL_FOUND = "No Thumbnail 😴"
-    NO_VOID_FORMAT_FOUND = "ERROR... <code>{}</code>"
-    FILE_NOT_FOUND = "Error, File not Found!!"
+    NO_CUSTOM_THUMB_NAIL_FOUND = "No Thumbnail"
+    NO_VOID_FORMAT_FOUND = "Error... <code>{}</code>"
+    FILE_NOT_FOUND = "Error, file not found!!"
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
     SOMETHING_WRONG = "<code>Something Wrong. Try again.</code>"
-    REPLY_TO_DOC_GET_LINK = "Reply to a Telegram media to get High Speed Direct Download Link"
+    REPLY_TO_DOC_GET_LINK = "Reply to a telegram media to get high speed direct download link"
     REPLY_TO_DOC_FOR_RENAME_FILE = "Reply to a Telegram media to /ren with custom thumbnail support"
     FF_MPEG_RO_BOT_RE_SURRECT_ED = """Syntax: /trim HH:MM:SS for screenshot of that specific time."""
     FF_MPEG_RO_BOT_STEP_TWO_TO_ONE = "First send /downloadmedia to any media so that it can be downloaded to my local. \nSend /storageinfo to know the media, that is currently downloaded."
@@ -126,9 +114,9 @@ I Am Telegram URL Uploader Bot.
     EXTRACT_ZIP_INTRO_THREE = "Analyzing received file. ⚠️ This might take some time. Please be patient. "
     UNZIP_SUPPORTED_EXTENSIONS = ("zip", "rar")
     ZIP_UPLOADED_STR = "Uploaded {} files in {} seconds"
-    FREE_USER_LIMIT_Q_SZE = """This Bot full free"""
+    FREE_USER_LIMIT_Q_SZE = """This bot full free"""
     SLOW_URL_DECED = "Gosh that seems to be a very slow URL. Since you were screwing my home, I am in no mood to download this file. Meanwhile, why don't you try this:==> https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
-    FORCE_SUBSCRIBE_TEXT = "<code>Sorry Dear You Must Join My Updates Channel for using me 😌😉....</code>"
-    BANNED_USER_TEXT = "<code>You are Banned!</code>"
+    FORCE_SUBSCRIBE_TEXT = "Just a joining ad"
+    BANNED_USER_TEXT = "<code>Banned!</code>"
     CHECK_LINK = "⚡️"
 
