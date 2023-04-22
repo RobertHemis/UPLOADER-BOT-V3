@@ -6,8 +6,6 @@ class Translation(object):
 Hello {},
 I'm Alifa!
 You can upload HTTP/HTTPS direct link, Using this bot.
-
-/help for more details!
 """
     HELP_TEXT = """
 Q:How to upload file or media?
