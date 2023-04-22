@@ -16,20 +16,20 @@ async def OpenSettings(m: "types.Message"):
     apply_caption = user_data.get("apply_caption", True)
     thumbnail = user_data.get("thumbnail", None)
     buttons_markup = [
-        [types.InlineKeyboardButton(f"ᴜᴘʟᴏᴀᴅ ᴀs {'🎥 ᴠɪᴅᴇᴏ' if upload_as_doc else '🗃️ ғɪʟᴇ'}",
-                                    callback_data="triggerUploadMode")],
-        [types.InlineKeyboardButton(f"{'ᴄʜᴀɴɢᴇ' if thumbnail else '🌃 sᴇᴛ'} ᴛʜᴜᴍʙɴᴀɪʟ",
+        [types.InlineKeyboardButton(f"Upload as {'Video' if upload_as_doc else 'File'}",
+                                    callback_data="triggerUploadMode"),
+        types.InlineKeyboardButton(f"{'Change' if thumbnail else 'Set'} thumbnail",
                                     callback_data="setThumbnail")]
     ]
     if thumbnail:
-        buttons_markup.append([types.InlineKeyboardButton("🌆 sʜᴏᴡ ᴛʜᴜᴍʙɴᴀɪʟ",
+        buttons_markup.append([types.InlineKeyboardButton("Show thumbnail",
                                                           callback_data="showThumbnail")])
-    buttons_markup.append([types.InlineKeyboardButton("🔒 Close",
+    buttons_markup.append([types.InlineKeyboardButton("Close",
                                                       callback_data="close")])
 
     try:
         await m.edit(
-            text="**ʜᴇʀᴇ ʏᴏᴜ ᴄᴀɴ sᴇᴛᴜᴘ ʏᴏᴜʀ sᴇᴛᴛɪɴɢs**",
+            text=" Here you can setup your setting",
             reply_markup=types.InlineKeyboardMarkup(buttons_markup),
             disable_web_page_preview=True,
             parse_mode="Markdown"
