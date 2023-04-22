@@ -34,7 +34,7 @@ async def progress_for_pyrogram(current, total, ud_type, message, start):
         )
         try:
             await message.edit(
-              text="**{}**\n\n {}".format(
+              text="**{}**\n {}".format(
               ud_type,
               tmp
                 ),
@@ -42,7 +42,7 @@ async def progress_for_pyrogram(current, total, ud_type, message, start):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [ 
-                        InlineKeyboardButton('❌ Cancel', callback_data='close')
+                        InlineKeyboardButton('Cancel', callback_data='close')
                        ]
                    ]
                  )
