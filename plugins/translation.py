@@ -52,16 +52,14 @@ Time: {4}\n
     HELP_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('Back', callback_data='home'),
-        InlineKeyboardButton('About', callback_data='about')
-        ],[
+        InlineKeyboardButton('About', callback_data='about'),
         InlineKeyboardButton('Close', callback_data='close')
         ]]
     )
     ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('Back', callback_data='home'),
-        InlineKeyboardButton('Help', callback_data='help')
-        ],[
+        InlineKeyboardButton('Help', callback_data='help'),
         InlineKeyboardButton('Close', callback_data='close')
         ]]
     )
@@ -75,7 +73,7 @@ Time: {4}\n
     RENAME_403_ERR = "Sorry you are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
     UPGRADE_TEXT = "<b>No preminum plans available in this bot </b>  /help for details"
-    FORMAT_SELECTION = "<b>Select your format \n\n video = upload as streamble\n\n file = upload as file\n\n"
+    FORMAT_SELECTION = "<b>Select your format \nVideo (upload as streamble) or File (upload as file)"
     SET_CUSTOM_USERNAME_PASSWORD = """"""
     NOYES_URL = "Slow URL detected. Please use public link and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
     DOWNLOAD_START = "Downloading..."
