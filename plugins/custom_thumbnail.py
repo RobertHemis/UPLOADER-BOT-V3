@@ -44,9 +44,9 @@ async def photo_handler(bot: Client, event: Message):
       fsub = await handle_force_subscribe(bot, event)
       if fsub == 400:
         return
-    editable = await event.reply_text("**👀 Processing...**")
+    editable = await event.reply_text("Processing...")
     await db.set_thumbnail(event.from_user.id, thumbnail=event.photo.file_id)
-    await editable.edit("**✅ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ sᴀᴠᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ!!**")
+    await editable.edit("Custom thumbnail saved successfully!")
 
 
 @Client.on_message(filters.private & filters.command(["delthumb", "deletethumbnail"]) & ~filters.edited)
@@ -61,9 +61,9 @@ async def delete_thumb_handler(bot: Client, event: Message):
 
     await db.set_thumbnail(event.from_user.id, thumbnail=None)
     await event.reply_text(
-        "**🗑️ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ᴅᴇʟᴇᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ!!**",
+        "Custom thumbnail deleted successfully!",
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("⚙ ᴄᴏɴғɪɢᴜʀᴇ sᴇᴛᴛɪɴɢs 👀", callback_data="OpenSettings")]
+            [InlineKeyboardButton("Configure setting", callback_data="OpenSettings")]
         ])
     )
 
@@ -81,13 +81,13 @@ async def viewthumbnail(bot, update):
         await bot.send_photo(
         chat_id=update.chat.id,
         photo=thumbnail,
-        caption=f"ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ sᴀᴠᴇᴅ ᴛʜᴜᴍʙɴᴀɪʟ 🦠",
+        caption=f"Your current saved thumbnail 🦠",
         reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("🗑️ ᴅᴇʟᴇᴛᴇ ᴛʜᴜᴍʙɴᴀɪʟ", callback_data="deleteThumbnail")]]
+                    [[InlineKeyboardButton("Delete thumbnail", callback_data="deleteThumbnail")]]
                 ),
         reply_to_message_id=update.message_id)
     else:
-        await update.reply_text(text=f"ɴᴏ ᴛʜᴜᴍʙɴᴀɪʟ ғᴏᴜɴᴅ 🤒")
+        await update.reply_text(text=f"No thumbnail found 🤒")
 
 
 async def Gthumb01(bot, update):
